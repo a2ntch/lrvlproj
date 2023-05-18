@@ -24,7 +24,7 @@ class PostFactory extends Factory
         return [
             'donatorname' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            'amount' => mt_rand(1, 50),
+            'amount' => rand(10, 500) / 10,
             'message' => Str::random(20),
             'date' => Carbon::createFromDate(2023, 4, rand(1, 31))
         ];
