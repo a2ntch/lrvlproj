@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->string('donatorname');
             $table->string('email')->unique();
-            $table->integer('amount')->unsigned();
+            $table->decimal('amount', 8, 2)->unsigned();
             $table->text('message')->nullable();
             $table->date('date');
             $table->timestamps();
