@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('amount')->unsigned();
             $table->text('message')->nullable();
             $table->date('date');
+            $table->timestamps();
         });
     }
 
