@@ -29,16 +29,17 @@ a {
     text-decoration: none;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 .home-page-content {
     display: flex;
-    text-align: center;
     justify-content: center;
-    flex-direction: column;
+}
+
+.home-info {
+    top: 40%;
+    width: 500px;
+    position: absolute;
+    transform: translate(0, -50%);
+    text-align: center;
 }
 
 .refs-container {

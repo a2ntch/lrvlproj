@@ -8,20 +8,18 @@
     <title>Home Page</title>
 </head>
 <body>
-    <div class="grid-container">
-        <div class="home-page-content">
+    <div class="home-page-content">
+        <div class="home-info">
             <h1>Donations</h1>
             <p>
-                We provide an opportunity to make donations. 
+                We provide an opportunity to make donations,
+                to make the world a better place. 
             </p>
             <div class="refs-container">
                 <a href="form">Form</a>
                 <a href="chart">Chart</a>
                 <a href="table">Table</a>
             </div>
-        </div>
-        <div class="main-content">
-
         </div>
     </div>
 </body>
