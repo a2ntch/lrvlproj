@@ -16,9 +16,7 @@
                 to make the world a better place. 
             </p>
             <div class="refs-container">
-                <a href="form">Form</a>
-                <a href="chart">Chart</a>
-                <a href="table">Table</a>
+                <a href="statistics">Statistics</a>
             </div>
         </div>
     </div>
