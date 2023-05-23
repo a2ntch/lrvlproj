@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\Pagination;
+use App\Http\Controllers\DonationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +14,4 @@ use App\Http\Controllers\Pagination;
 |
 */
 
-Route::get('/', [MainController::class, 'home']);
-
-Route::get('/statistics', [Pagination::class, 'statistics']);
+Route::get('/', [DonationController::class, 'statistics']);

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Donation;
 
-class Pagination extends Controller
+class DonationController extends Controller
 {
     public function statistics() {
         $donations = Donation::simplePaginate(10);
