@@ -20,7 +20,6 @@
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Donator Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Amount</th>
@@ -31,7 +30,6 @@
             <tbody>
                 @foreach ($donations as $donation)
                 <tr>
-                    <td>{{ $donation->id }}</td>
                     <td>{{ $donation->donatorname }}</td>
                     <td>{{ $donation->email }}</td>
                     <td>{{ $donation->amount }}</td>
