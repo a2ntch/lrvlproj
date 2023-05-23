@@ -15,7 +15,6 @@
             You can see donation statistics for the last month below.
         </p>
     </div>
-
     <div class="table-responsive">
         <h2>List of all donations</h2>
         <table class="table table-striped table-sm">
@@ -30,32 +29,19 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($donations as $donation)
                 <tr>
-                    <td>1,001</td>
-                    <td>random</td>
-                    <td>data</td>
-                    <td>placeholder</td>
-                    <td>text</td>
-                    <td>date</td>
+                    <td>{{ $donation->id }}</td>
+                    <td>{{ $donation->donatorname }}</td>
+                    <td>{{ $donation->email }}</td>
+                    <td>{{ $donation->amount }}</td>
+                    <td>{{ $donation->message }}</td>
+                    <td>{{ $donation->date }}</td>
                 </tr>
-                <tr>
-                    <td>1,002</td>
-                    <td>placeholder</td>
-                    <td>irrelevant</td>
-                    <td>visual</td>
-                    <td>layout</td>
-                    <td>date</td>
-                </tr>
-                <tr>
-                    <td>1,003</td>
-                    <td>data</td>
-                    <td>rich</td>
-                    <td>dashboard</td>
-                    <td>tabular</td>
-                    <td>date</td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
+        {{ $donations->links() }}
     </div>
 </body>
 </html>
