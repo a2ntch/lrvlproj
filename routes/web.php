@@ -14,4 +14,4 @@ use App\Http\Controllers\DonationController;
 |
 */
 
-Route::get('/', [DonationController::class, 'statistics']);
+Route::get('/', [DonationController::class, 'index']);
