@@ -41,13 +41,16 @@ p {
 #card-1,
 #card-2,
 #card-3 {
+    color: #fff;
+    font-weight: 700;
     margin: 20px;
     padding: 20px;
     width: 350px;
     height: 180px;
-    border-radius: 4px;
-    border: 4px outset #c2c2c2;
-    background-color: #f7f7f7;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    border-left: 5px solid #0f6aab;
+    background-color: #a8c8ed;
 }
 
 #card-1 > p,

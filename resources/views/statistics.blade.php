@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Statistics page</title>
 </head>
-<body>
+<body> 
     <div class="statistics-info">
         <h1>Donation statistics</h1>
         <p>
@@ -18,16 +18,24 @@
     <div class="card-container">
         <div id="card-1">
             <p>Top Donator</p>
-            <p></p>
-            <p></p>
+            <p>
+                {{ $topDonatorAmount }}
+            </p>
+            <p>
+                {{ $topDonatorName }}
+            </p>
         </div>
         <div id="card-2">
             <p>Last Month Amount</p>
-            <p></p>
+            <p>
+                {{ $lastMonthAmount }}
+            </p>
         </div>
         <div id="card-3">
             <p>All Time Amount</p>
-            <p></p>
+            <p>
+                {{ $allTimeAmount }}
+            </p>
         </div>
     </div>  
     <div class="table-responsive">
