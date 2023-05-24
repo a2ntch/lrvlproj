@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/statistics.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Statistics page</title>
 </head>
 <body>
@@ -15,6 +15,21 @@
             You can see donation statistics for the last month below.
         </p>
     </div>
+    <div class="card-container">
+        <div id="card-1">
+            <p>Top Donator</p>
+            <p></p>
+            <p></p>
+        </div>
+        <div id="card-2">
+            <p>Last Month Amount</p>
+            <p></p>
+        </div>
+        <div id="card-3">
+            <p>All Time Amount</p>
+            <p></p>
+        </div>
+    </div>  
     <div class="table-responsive">
         <h2>List of all donations</h2>
         <table class="table table-striped table-sm">
