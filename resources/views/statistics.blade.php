@@ -22,11 +22,9 @@
         ></x-cards>
         <x-cards title="Last Month Amount"
             :amount="$lastMonthAmount"
-            donator=""
         ></x-cards>
         <x-cards title="All Time Amount"
             :amount="$allTimeAmount"
-            donator=""
         ></x-cards>
     </div>  
     <div class="table-responsive">

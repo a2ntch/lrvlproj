@@ -15,7 +15,7 @@ class Cards extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct($title, $amount, $donator) 
+    public function __construct($title, $amount, $donator = null) 
     {
         $this->title = $title;
         $this->amount = $amount;
