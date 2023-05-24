@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Donation;
+use Carbon\Carbon;
 
 class DonationController extends Controller
 {
@@ -13,7 +14,17 @@ class DonationController extends Controller
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
     public function index() {
-        $donations = Donation::paginate(10);
-        return view('statistics', compact('donations'));
+        $topDonation = Donation::orderByDesc('amount')->first();
+        
+        return view('statistics', [
+            'donations' => Donation::paginate(10),
+            'topDonatorAmount' => $topDonation->amount,
+            'topDonatorName' => $topDonation->donatorname,
+            'lastMonthAmount' => Donation::whereMonth(
+                    'date', Carbon::now()->month
+                )
+                ->sum('amount'),
+            'allTimeAmount' => Donation::sum('amount')
+        ]);
     }
 }
