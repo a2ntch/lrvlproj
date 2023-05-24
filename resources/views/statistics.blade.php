@@ -16,27 +16,18 @@
         </p>
     </div>
     <div class="card-container">
-        <div id="card-1">
-            <p>Top Donator</p>
-            <p>
-                {{ $topDonatorAmount }}
-            </p>
-            <p>
-                {{ $topDonatorName }}
-            </p>
-        </div>
-        <div id="card-2">
-            <p>Last Month Amount</p>
-            <p>
-                {{ $lastMonthAmount }}
-            </p>
-        </div>
-        <div id="card-3">
-            <p>All Time Amount</p>
-            <p>
-                {{ $allTimeAmount }}
-            </p>
-        </div>
+        <x-cards title="Top Donator"
+            :amount="$topDonatorAmount"
+            :donator="$topDonatorName"
+        ></x-cards>
+        <x-cards title="Last Month Amount"
+            :amount="$lastMonthAmount"
+            donator=""
+        ></x-cards>
+        <x-cards title="All Time Amount"
+            :amount="$allTimeAmount"
+            donator=""
+        ></x-cards>
     </div>  
     <div class="table-responsive">
         <h2>List of all donations</h2>

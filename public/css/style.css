@@ -38,9 +38,7 @@ p {
     margin: 30px auto 60px;
 }
 
-#card-1,
-#card-2,
-#card-3 {
+.card {
     color: #fff;
     font-weight: 700;
     margin: 20px;
@@ -53,9 +51,7 @@ p {
     background-color: #a8c8ed;
 }
 
-#card-1 > p,
-#card-2 > p,
-#card-3 > p {
+.card p {
     margin-bottom: 20px;
 }
 
