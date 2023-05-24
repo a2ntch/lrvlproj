@@ -10,9 +10,8 @@ class DonationController extends Controller
     /**
      * This method returns main page and data from DB with pagination.
      * 
-     * @return statisctics.blade.php with data from DB.
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
-
     public function index() {
         $donations = Donation::paginate(10);
         return view('statistics', compact('donations'));
