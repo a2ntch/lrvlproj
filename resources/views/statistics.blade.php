@@ -7,7 +7,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="/js/chart.js"></script>
+    <script>
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        const decodedChartData = {{ Illuminate\Support\Js::from($chartData) }};
+        console.log(typeof decodedChartData);
+
+        function drawChart() {
+            console.log('decodedChartData :>> ', decodedChartData);
+            var data = new google.visualization.arrayToDataTable(decodedChartData);
+
+            var options = {
+                title: "Donation Statistics",
+                curveType: "function",
+                legend: { position: "bottom" },
+            };
+
+            var chart = new google.visualization.LineChart(
+                document.getElementById("curve_chart")
+            );
+
+            chart.draw(data, options);
+        }
+    </script>
     <title>Statistics page</title>
 </head>
 <body> 
